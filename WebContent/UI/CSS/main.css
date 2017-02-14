@@ -1,0 +1,25 @@
+div.container {
+    width: 100%;
+    margin:10px;
+}
+.yellow {
+  background-color: wheat !important;
+}
+
+#dashboardtable th{
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+}
+
+#dashboardtable td{
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+}
+
+#dashboardtable div.tablesorter-header-inner{
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+}
