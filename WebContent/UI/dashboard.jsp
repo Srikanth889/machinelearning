@@ -73,7 +73,7 @@
 	        })
         	function dashboardtables(){
 	        	var totalchildrenCount=$("#dashboardtable thead th").length;
-	        	var ml_modelid="ml-bAdvybNZ86C";
+	        	var ml_modelid="your AWS Model ID"//provide your model id for Amazon;
 	        	var async_request=[];
 				var dataRangeChart=new Array();
 				var dataDifferenceChart=new Array();
@@ -220,7 +220,7 @@
         function csvImport(){
         	var tablerow=new Array();
             <% 
-            String fName = "C:\\Users\\rallabandis\\Desktop\\ml_02142017_1.csv";
+            String fName = "your csvfilename" //provide csv filename here;
             String thisLine; 
             int count=0; 
             FileInputStream fis = new FileInputStream(fName);
