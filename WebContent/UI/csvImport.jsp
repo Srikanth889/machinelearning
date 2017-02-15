@@ -2,7 +2,8 @@
 <%@ page import="java.io.FileReader" %>
 <%@ page import="java.io.IOException" %>
 <% 
-	FileReader fr = new FileReader("C:\\Users\\rallabandis\\Desktop\\ml_02142017_1.csv");
+	String args[]=request.getParameterValues("dataSet[]");
+	FileReader fr = new FileReader(args[0]);
 	BufferedReader br = new BufferedReader(fr);
     try {
             String strline;
