@@ -18,37 +18,15 @@
         	$(document).ajaxStop($.unblockUI);
 	        $(document).ready(function() 
 	        	    { 
-     	      		 
-     	      		//  databaseImport();
-     	      			 csvImport();
-				        $(".tablesorter").tablesorter({
-			                textExtraction: function (node) {
-			                    var txt = $(node).text();
-			                    txt = txt.replace('NA', '');
-			                    return txt;
-			                },
-			                emptyTo: 'bottom',
-			        		theme: 'blue',
-			        	    widgets: ["zebra","stickyHeaders","filter","output"],
-			        	    widgetOptions : {
-			        		  stickyHeaders_attachTo : '#dashboardtable',
-			        		  filter_hideFilters : true,
-			        		  filter_placeholder : { search : 'Search...'},
-			        		  output_delivery      : 'd', 
-			        		  output_saveFileName  : 'machinelearning.csv'
-			        	    }
-			        	}).bind('filterEnd', function() {
-			        		  $("#tableTotalrows_filtered").html("");
-			        		  $("#tableTotalrows_filtered").html("Records Found: " + ($('#dashboardtable tr:visible').length-2));
-			        			});
-	        	        $("#checkAll").change(function () {
-	        	            $('input[name="checkrow"]').prop('checked', $(this).prop("checked")).trigger("change");
-	        	        });
-	        	        $('input[name="checkrow"]').on('change', function() {
-	        	        	  $(this).parent().toggleClass('yellow', $(this).is(':checked'));
-	        	        	  $(this).parent().siblings().toggleClass('yellow', $(this).is(':checked'));
-	        	        	  $(this).parent().parent().toggleClass('checked', $(this).is(':checked'));
-	        	        });
+			        	csvImport();
+		            	 $(document).on('change', 'input[name="checkrow"]', function() {
+		    	        	  $(this).parent().toggleClass('yellow', $(this).is(':checked'));
+		    	        	  $(this).parent().siblings().toggleClass('yellow', $(this).is(':checked'));
+		    	        	  $(this).parent().parent().toggleClass('checked', $(this).is(':checked'));
+			        	  });
+			        	 $(document).on('change', '#checkAll', function() {
+			        	   	  $('input[name="checkrow"]').prop('checked', $(this).prop("checked")).trigger("change");
+			        	});
 	        	    } 
 	        	); 
         </script>
