@@ -3,7 +3,8 @@
 <%@ page import="java.io.IOException" %>
 <% 
 	String args[]=request.getParameterValues("dataSet[]");
-	FileReader fr = new FileReader(args[0]);
+	File csvFilename = new File(args[0]); 
+	FileReader fr = new FileReader(csvFilename);
 	BufferedReader br = new BufferedReader(fr);
     try {
             String strline;
