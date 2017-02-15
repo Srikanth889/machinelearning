@@ -64,12 +64,11 @@
         	message: '<i class="fa fa-spinner fa-spin fa-3x fa-fw" style="vertical-align:middle;"></i><h3 style="display:inline;vertical-align:middle;">Just a moment...</h3>'
         });
 		var csvInformation=new Array();
-		csvInformation[0]="filenamewithpath";
+		csvInformation[0]="filenamewithpath";//pattern C:/Users/user123/Desktop/filename.csv
 		$.ajax({
             type : "POST",
             url : "csvImport.jsp",
             data:{dataSet:csvInformation},
-            dataType:"json",
             success : function(data) {
 	         	$('#dashboardtable').append(data);
 	        	$("#dashboardtable td:last-child").addClass("sorter-percent");
