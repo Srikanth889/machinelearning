@@ -130,7 +130,7 @@
 	  <script>
        	function dashboardtables(){
         	var totalchildrenCount=$("#dashboardtable thead th").length;
-        	var ml_modelid="ml-bAdvybNZ86C";
+        	var ml_modelid="modelid";
         	var async_request=[];
 			var dataRangeChart=new Array();
 			var dataDifferenceChart=new Array();
