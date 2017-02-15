@@ -143,8 +143,10 @@
 					if((childrenCount-3)!=index){
 						var thead=$("#dashboardtable thead").find('th').eq(index).text();
 						var tdata=$(this).text();
-						var datafield=thead.trim()+"="+tdata.trim();
-						datadashboard.push(datafield)
+						if(tdata!=""){
+							var datafield=thead.trim()+"="+tdata.trim();
+							datadashboard.push(datafield)
+						}
 					} else {
 						return false;
 					}
